@@ -11,7 +11,6 @@ export default function coinsReducer(state = [], action) {
     case FULFIL_FETCH_ALL: {
       let coins = [];
       if (action.payload) {
-        console.log(action.payload);
         coins = action.payload.data.map((item) => ({
           symbol: item.symbol,
           priceUsd: Math.floor(item.priceUsd),
