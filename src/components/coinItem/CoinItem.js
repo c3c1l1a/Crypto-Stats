@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
+import CoinChart from './CoinChart';
 
 const CoinItem = ({ coin }) => (
-  <li>{coin.symbol}</li>
+  <>
+    <li>{coin.symbol}</li>
+    <CoinChart />
+  </>
 );
 
 CoinItem.defaultProps = {
