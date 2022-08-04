@@ -14,10 +14,10 @@ export default function coinsHistoryReducer(state = {}, action) {
       if (action.payload) {
         coinHistoryData[action.payload[0]] = action.payload[1].data.map((item) => ({
           date: item.date,
-          price: Math.floor(item.price),
+          price: Math.floor(item.priceUsd),
         }));
       }
-      console.log(coinHistoryData);
+
       return { ...state, ...coinHistoryData };
     }
     default:

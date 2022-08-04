@@ -14,7 +14,7 @@ const CoinItem = ({ coin }) => {
   return (
     <>
       <li><button type="submit" onClick={onClick}>{coin.symbol}</button></li>
-      <CoinChart id={coin.id} />
+      <CoinChart coinId={coin.id} />
     </>
   );
 };
