@@ -27,16 +27,17 @@ const CoinChart = ({ coinId }) => {
 
   const options = {
     responsive: true,
+    aspectRatio: 0.5,
     pointStyle: 'circle',
-    radius: '3',
-    hoverRadius: '3',
+    radius: '5',
+    hoverRadius: '5',
     plugins: {
       legend: {
         position: 'top',
       },
       title: {
-        display: true,
-        text: `${coinId} Line Chart`,
+        display: false,
+        text: `${coinId} price`,
       },
     },
   };
