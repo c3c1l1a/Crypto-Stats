@@ -9,7 +9,7 @@ const http = axios.create({
 
 const getAllCoins = async () => http.get('/', {
   params: {
-    limit: 1,
+    limit: 3,
   },
 });
 

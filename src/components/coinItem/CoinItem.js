@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { getCoinHistoricalData } from '../../redux/coinsHistory';
-import CoinChart from './CoinChart';
 
-const CoinItem = ({ coin }) => {
+const CoinItem = ({ coin, setCoinId }) => {
   const dispatch = useDispatch();
 
-  const onClick = async (e) => {
-    e.preventDefault();
+  const onClick = async () => {
+    console.log('test');
     await dispatch(getCoinHistoricalData(coin.id));
+    setCoinId(coin.id);
   };
 
   return (
-    <>
-      <li><button type="submit" onClick={onClick}>{coin.symbol}</button></li>
-      <CoinChart coinId={coin.id} />
-    </>
+    <NavLink onClick={onClick} to="details">{coin.id}</NavLink>
   );
 };
 
@@ -27,6 +25,7 @@ CoinItem.propTypes = {
   coin: PropTypes.objectOf(PropTypes.oneOfType(
     [PropTypes.string, PropTypes.number, PropTypes.array, PropTypes.bool],
   )),
+  setCoinId: PropTypes.func.isRequired,
 };
 
 export default CoinItem;
