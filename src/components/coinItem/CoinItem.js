@@ -1,12 +1,23 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { getCoinHistoricalData } from '../../redux/coinsHistory';
 import CoinChart from './CoinChart';
 
-const CoinItem = ({ coin }) => (
-  <>
-    <li>{coin.symbol}</li>
-    <CoinChart />
-  </>
-);
+const CoinItem = ({ coin }) => {
+  const dispatch = useDispatch();
+
+  const onClick = async (e) => {
+    e.preventDefault();
+    await dispatch(getCoinHistoricalData(coin.id));
+  };
+
+  return (
+    <>
+      <li><button type="submit" onClick={onClick}>{coin.symbol}</button></li>
+      <CoinChart id={coin.id} />
+    </>
+  );
+};
 
 CoinItem.defaultProps = {
   coin: {},

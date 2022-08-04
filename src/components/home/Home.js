@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home">
       <ul>
         {coins.map((coin) => (
-          <CoinItem key={coin.symbol} coin={coin} />
+          <CoinItem key={coin.id} coin={coin} />
         ))}
       </ul>
     </div>

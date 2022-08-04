@@ -1,3 +1,5 @@
+import { Line } from 'react-chartjs-2';
+import { useSelector } from 'react-redux';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,7 +10,6 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -21,6 +22,9 @@ ChartJS.register(
 );
 
 const CoinChart = () => {
+  const coinData = useSelector((state) => state.coinsHistory);
+  console.log(coinData);
+
   const options = {
     responsive: true,
     pointStyle: 'circle',
