@@ -48,7 +48,6 @@ const CoinChart = ({ coinId }) => {
     labels = coinData[coinId].map((item) => {
       const temp1 = item.date.replace('T00:00:00.000Z', '');
       const temp2 = temp1.substring(5);
-      console.log(temp2);
       return temp2;
     });
   }

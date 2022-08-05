@@ -7,7 +7,6 @@ const CoinItem = ({ coin, setCoinId }) => {
   const dispatch = useDispatch();
 
   const onClick = async () => {
-    console.log('test');
     await dispatch(getCoinHistoricalData(coin.id));
     setCoinId(coin.id);
   };
