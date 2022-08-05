@@ -8,10 +8,14 @@ const Home = ({ setCoinId }) => {
 
   return (
     <div className="home">
-      <ul>
-        {coins.map((coin) => (
-          <CoinItem key={coin.id} coin={coin} setCoinId={setCoinId} />
-        ))}
+      <ul className="coin-list">
+        {coins.map((coin, index) => {
+          let color = '';
+          if (index % 4 === 0 || index % 4 === 3) color = 'dark';
+          else { color = 'light'; }
+
+          return (<CoinItem color={color} key={coin.id} coin={coin} setCoinId={setCoinId} />);
+        })}
       </ul>
     </div>
   );
