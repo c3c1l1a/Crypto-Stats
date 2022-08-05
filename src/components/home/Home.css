@@ -9,7 +9,6 @@
 	color: #fff;
 	text-decoration: none;
 	box-shadow: 1px 1px 10px -3px pink;
-	
 }
 
 .light {
@@ -57,12 +56,25 @@
 }
 
 .coin-item-indicator p {
-	font-size: 13px;
+	font-size: 13px;	
+}
+
+.positive {
 	color: #fefb50;
+}
+.negative {
+	color: orange;
 }
 
 .up-arrow {
 	fill: #fefb50;
+	position: absolute;
+	right: 0;
+	transform: scale(0.5);
+}
+
+.down-arrow {
+	fill:  orange;
 	position: absolute;
 	right: 0;
 	transform: scale(0.5);

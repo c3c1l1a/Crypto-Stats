@@ -28,11 +28,24 @@ const CoinItem = ({ color, coin, setCoinId }) => {
           />
         </svg>
         <div className="coin-item-indicator-details">
-          <p>
-            {coin.changePercent24Hr}
-            %
-          </p>
-          <svg className="up-arrow" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m14 28 10-10.05L34 28Z" /></svg>
+          {coin.changePercent24Hr > 0
+            ? (
+              <p className="positive">
+                {coin.changePercent24Hr}
+                %
+              </p>
+            )
+            : (
+              <p className="negative">
+                {coin.changePercent24Hr}
+                %
+              </p>
+            )}
+
+          {coin.changePercent24Hr > 0
+            ? <svg className="up-arrow" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m14 28 10-10.05L34 28Z" /></svg>
+            : <svg className="down-arrow" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m24 30-10-9.95h20Z" /></svg>}
+
         </div>
         <p>{coin.symbol}</p>
       </div>
