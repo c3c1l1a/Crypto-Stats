@@ -13,7 +13,7 @@ const CoinItem = ({ coin, setCoinId }) => {
   };
 
   return (
-    <NavLink onClick={onClick} to="details">{coin.id}</NavLink>
+    <NavLink onClick={onClick} to={`details/${coin.id}`}>{coin.id}</NavLink>
   );
 };
 

@@ -22,7 +22,7 @@ function App() {
       <NavLink onClick={onClick} to="/">Home</NavLink>
       <Routes>
         <Route exact path="/" element={<Home setCoinId={setCoinId} />} />
-        <Route path="details/" element={<Details coinId={coinId} />} />
+        <Route path="details/*" element={<Details coinId={coinId} />} />
       </Routes>
     </div>
   );
