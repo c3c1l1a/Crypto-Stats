@@ -9,12 +9,21 @@ const http = axios.create({
 
 const getAllCoins = async () => http.get('/', {
   params: {
-    limit: 10,
+    limit: 30,
+  },
+});
+
+const getCoinHistoricalData = async (id) => http.get(`/${id}/history`, {
+  params: {
+    interval: 'd1',
+    start: Date.now() - (86400 * 30 * 1000),
+    end: Date.now(),
   },
 });
 
 const coinCapService = {
   getAllCoins,
+  getCoinHistoricalData,
 };
 
 export default coinCapService;
