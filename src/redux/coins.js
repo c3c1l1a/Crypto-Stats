@@ -13,7 +13,6 @@ export default function coinsReducer(state = [], action) {
     case FULFIL_FETCH_ALL: {
       let coins = [];
       if (action.payload) {
-        console.log(action.payload);
         coins = action.payload.data.map((item) => ({
           id: item.id,
           symbol: item.symbol,

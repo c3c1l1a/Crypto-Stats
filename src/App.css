@@ -11,3 +11,11 @@
       #fe5194 
     );
 }
+
+.show {
+	fill: transparent;
+}
+
+.hide {
+	fill: #fff;
+}
