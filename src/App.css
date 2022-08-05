@@ -1,0 +1,13 @@
+.back-button-icon {
+	fill:  #fff;
+	transform: scale(0.5);
+}
+
+.home-nav {
+	display: flex;
+	background: linear-gradient(
+      to right,
+      #000,
+      #fe5194 
+    );
+}
