@@ -1,6 +1,7 @@
 import { Line } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,6 +12,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import './CoinChart.css';
 
 ChartJS.register(
   CategoryScale,
@@ -27,17 +29,32 @@ const CoinChart = ({ coinId }) => {
 
   const options = {
     responsive: true,
-    aspectRatio: 0.5,
+    aspectRatio: 0.8,
     pointStyle: 'circle',
     radius: '5',
     hoverRadius: '5',
+    drawBorder: false,
+    scales: {
+      y: {
+        ticks: { color: '#fff', beginAtZero: true },
+      },
+      x: {
+        ticks: { color: '#fff', beginAtZero: true },
+      },
+
+    },
     plugins: {
       legend: {
         position: 'top',
+        color: '#fff',
+        labels: {
+          color: '#fff',
+        },
       },
       title: {
         display: false,
         text: `${coinId} price`,
+        color: '#fff',
       },
     },
   };
@@ -58,14 +75,15 @@ const CoinChart = ({ coinId }) => {
       {
         label: coinId,
         data: labels.map((item, index) => (coinData ? coinData[coinId][index].price : 0)),
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132)',
+        borderColor: '#f2c827',
+        backgroundColor: '#dd467f',
+        borderWidth: '2',
       },
     ],
   };
 
   return (
-    <Line options={options} data={data} />
+    <Line className="chart" options={options} data={data} />
   );
 };
 
