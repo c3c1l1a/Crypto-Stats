@@ -88,3 +88,26 @@
 	transform: scale(0.5);
 	fill: #fff;
 }
+
+.search {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 10px;
+	background: #fff;
+	padding: 0 10px;
+}
+
+.search-text {
+	outline:  none;
+	border:  none;
+	padding:  5px;
+	width: 80%;
+	font-size: 20px;
+	opacity: 0.6;
+}
+
+.search-icon {
+	fill:  #d6457c;
+}
+
