@@ -12,7 +12,6 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import './CoinChart.css';
 
 ChartJS.register(
   CategoryScale,
