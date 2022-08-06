@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavLink className="home-nav" claonClick={onClick} to="/">
+      <NavLink className="home-nav" onClick={onClick} to="/">
         {
           location.pathname !== '/'
             ? (

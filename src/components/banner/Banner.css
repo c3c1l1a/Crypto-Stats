@@ -1,9 +1,4 @@
 .banner {
-	background: linear-gradient(
-      to right,
-      #000,
-      #fe5194 
-    );
     display: flex;
     justify-content: space-between;
     padding: 10px;

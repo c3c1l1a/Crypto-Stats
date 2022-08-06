@@ -1,9 +1,10 @@
 .App {
 	background: linear-gradient(
-		to right,
+		to right bottom,
 		#000,
 		#fe5194
 	);
+	height: 100vh;
 }
 .back-button-icon {
 	fill:  #fff;
@@ -12,11 +13,6 @@
 
 .home-nav {
 	display: flex;
-	background: linear-gradient(
-      to right,
-      #000,
-      #fe5194 
-    );
 }
 
 .show {
