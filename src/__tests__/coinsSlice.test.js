@@ -44,7 +44,7 @@ describe('App Test', () => {
     }));
   });
 
-  it('Loads and filters data from API correctly', async () => {
+  it('Renders all a list coins on load', async () => {
     render(
       <Provider store={store}>
         <Router>
@@ -66,4 +66,46 @@ describe('App Test', () => {
     });
   });
 
+  it('Displays navigates to item route on click', async () => {
+    render(
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    );
+
+    await coinsSpy.mockResolvedValue(state);
+    const data = await coinCapService.getAllCoins();
+    act(() => store.dispatch({
+      type: 'coins/FETCH_ALL/fulfilled',
+      payload: data.data,
+    }));
+
+    const coinItem = screen.getByText('Bitcoin').closest('a');
+    fireEvent.click(coinItem);
+
+    await waitFor(() => {
+      expect(window.location.href).toEqual('http://localhost/details/bitcoin');
+    });
+  });
+
+  it('maintains the snapshots between renders', async () => {
+    const tree = render(
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    );
+
+    await coinsSpy.mockResolvedValue(state);
+    const data = await coinCapService.getAllCoins();
+    act(() => store.dispatch({
+      type: 'coins/FETCH_ALL/fulfilled',
+      payload: data.data,
+    }));
+
+    await expect(tree).toMatchSnapshot();
+  });
 });
