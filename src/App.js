@@ -14,10 +14,8 @@ function App() {
   const [coinId, setCoinId] = useState('');
   const location = useLocation();
 
-
   useEffect(() => async () => {
-    const res = await dispatch(fetchAllCoins());
-    console.log('app useEffect', res);
+    await dispatch(fetchAllCoins());
   }, []);
 
   const onClick = () => {

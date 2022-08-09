@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const http = axios.create({
   baseURL: 'https://api.coincap.io/v2/assets',
   headers: {
@@ -8,13 +7,11 @@ const http = axios.create({
   },
 });
 
-
 const getAllCoins = async () => http.get('/', {
   params: {
     limit: 100,
   },
 });
-
 
 const getCoinHistoricalData = async (id) => http.get(`/${id}/history`, {
   params: {
