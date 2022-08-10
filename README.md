@@ -8,7 +8,7 @@
 > React, Redux and CSS for styling
 
 ## [Live Demo](https://crypto-stats-app.herokuapp.com)
-## [Video presentation](https://drive.google.com/file/d/1V6blBIR5eKmlfT3eC19ETdi5hH4-LLXF/view?usp=sharing)
+## [Video presentation](https://www.loom.com/share/cdea51ebc9fa47c8ae10c88e1c0e21d4)
 
 ## Getting Started
 
