@@ -111,11 +111,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - LinkedIn: [cecilia-wangui-mukima](https://linkedin.com/in/linkedinhandle)
 - Profile [c3cl1ia.github.io](https://c3c1l1a.github.io)
 
-**Bruk Teshome**
-
-- GitHub: [@githubhandle](https://github.com/bruk19)
-- Twitter: [@twitterhandle](https://twitter.com/Bruktesh)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/bruk-teshome-ab4325226)
 
 ## Contributing
 
@@ -130,6 +125,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 - Microverse
 - IHat tip to anyone whose code was used for inspiration
+- Design inspired by the Creative Commons design by [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 ## 📝 License
 
