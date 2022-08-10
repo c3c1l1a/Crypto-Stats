@@ -14,7 +14,6 @@ const Home = ({ setCoinId }) => {
   } else {
     displayItems = coins;
   }
-
   return (
     <div className="home">
       <Search setFiltedCoins={setFiltedCoins} coins={coins} />
