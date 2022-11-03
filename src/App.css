@@ -1,0 +1,33 @@
+.App {
+  background:
+    linear-gradient(
+      to right bottom,
+      #000,
+      #fe5194
+    );
+  height: 100vh;
+}
+
+.back-button-icon {
+  fill: #fff;
+  transform: scale(0.5);
+}
+
+.home-nav {
+  display: flex;
+}
+
+.show {
+  fill: transparent;
+}
+
+.hide {
+  fill: #fff;
+}
+
+@media (min-width: 768px) {
+  .App {
+    padding: 0 20%;
+    overflow: scroll;
+  }
+}

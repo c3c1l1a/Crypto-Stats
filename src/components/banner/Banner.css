@@ -1,0 +1,32 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.banner-image {
+  opacity: 0.2;
+}
+
+.banner-details {
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-details h1 {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.banner-details p {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 20px;
+}
