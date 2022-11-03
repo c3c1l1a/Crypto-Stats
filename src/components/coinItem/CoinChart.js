@@ -28,7 +28,7 @@ const CoinChart = ({ coinId }) => {
 
   const options = {
     responsive: true,
-    aspectRatio: 0.8,
+    aspectRatio: 2,
     pointStyle: 'circle',
     radius: '5',
     hoverRadius: '5',
